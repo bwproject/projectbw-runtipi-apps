@@ -1,0 +1,18 @@
+{
+  "id": "rocketchat",
+  "name": "Rocket.Chat",
+  "version": "1.0.0",
+  "description": "Open Source Chat platform with audio and video calls",
+  "author": "ProjectBW",
+  "image": "rocketchat/rocket.chat:6.10.2",
+  "port": 3100,
+  "env": {
+    "MONGO_URL": "mongodb://mongo:27017/rocketchat",
+    "ROOT_URL": "http://localhost:3100",
+    "PORT": "3000"
+  },
+  "volumes": {
+    "uploads": "/app/uploads"
+  },
+  "depends_on": ["mongo"]
+}
