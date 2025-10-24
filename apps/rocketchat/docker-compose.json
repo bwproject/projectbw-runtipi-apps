@@ -1,0 +1,26 @@
+{
+  "version": "3.9",
+  "services": {
+    "rocketchat": {
+      "image": "rocketchat/rocket.chat:6.10.2",
+      "restart": "unless-stopped",
+      "environment": [
+        "MONGO_URL=mongodb://mongo:27017/rocketchat",
+        "ROOT_URL=http://localhost:3100",
+        "PORT=3000"
+      ],
+      "ports": ["3100:3000"],
+      "volumes": ["rocketchat_uploads:/app/uploads"],
+      "depends_on": ["mongo"]
+    },
+    "mongo": {
+      "image": "mongo:6.0",
+      "restart": "unless-stopped",
+      "volumes": ["rocketchat_mongo:/data/db"]
+    }
+  },
+  "volumes": {
+    "rocketchat_uploads": {},
+    "rocketchat_mongo": {}
+  }
+}
