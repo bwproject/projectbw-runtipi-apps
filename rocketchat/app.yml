@@ -1,0 +1,22 @@
+id: rocketchat
+name: Rocket.Chat
+version: "1.0.0"
+description: Open Source Chat with calls
+author: ProjectBW
+image: rocketchat/rocket.chat:latest
+env:
+  - MONGO_URL=mongodb://mongo:27017/rocketchat
+  - ROOT_URL=http://localhost:3100
+  - PORT=3000
+ports:
+  - 3100:3000
+volumes:
+  - rocketchat_uploads:/app/uploads
+depends_on:
+  - mongo
+addons:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    volumes:
+      - rocketchat_mongo:/data/db
