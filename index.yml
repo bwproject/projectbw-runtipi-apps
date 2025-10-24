@@ -1,7 +1,7 @@
 id: projectbw
 name: ProjectBW Apps
 author: ProjectBW
-description: Custom Runtipi apps collection by ProjectBW
+description: Custom Runtipi app store containing Rocket.Chat
 
 apps:
   - id: rocketchat
@@ -9,7 +9,3 @@ apps:
     version: "1.0.0"
     description: Open Source Chat platform with audio/video calls
     author: ProjectBW
-    # Основная ссылка (используется при установке)
-    repo: https://raw.githubusercontent.com/bwproject/projectbw-runtipi-apps/main/rocketchat/app.yml
-    # Альтернативный путь для локальной установки (если repo не сработает)
-    path: rocketchat
