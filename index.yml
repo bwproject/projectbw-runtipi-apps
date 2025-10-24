@@ -1,0 +1,8 @@
+id: projectbw
+name: ProjectBW Apps
+author: ProjectBw
+description: Custom Runtipi apps collection
+apps:
+  - id: rocketchat
+    name: Rocket.Chat
+    repo: https://github.com/bwproject/projectbw-runtipi-apps/tree/main/rocketchat
